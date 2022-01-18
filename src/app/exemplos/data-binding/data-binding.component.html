@@ -1,0 +1,41 @@
+<section>
+  <h3>Interpolação</h3>
+  <hr />
+  <p>{{ nome }}</p>
+  <p> Olá, eu sou {{ nome }}.</p>
+  <p> Olá, eu sou {{ nome }} e tenho {{ idade }} anos.</p>
+</section>
+<section>
+  <h3>Property binding</h3>
+  <hr />
+  <img [src]="link" [alt]="alt" [height]="altura" /> <!--Property utiliza propriedades-->
+  <!-- <img src="{{ link }}" /> Interpolação (não é habitual a utilização no caso da imagem)-->
+</section>
+<section>
+  <h3>Event binding</h3>
+  <hr />
+  <button (click)="alerta()">Alertar</button>
+</section>
+<section>
+  <h3>Two-way data binding</h3>
+  <hr />
+  <input type="text" [(ngModel)]="nomeCompleto" />
+  <p> {{ nomeCompleto }}</p>
+  <h4>Exemplo:</h4>
+  <input type="text" [(ngModel)]="estudante.nomeCompleto" />
+  <input type="text" [(ngModel)]="estudante.idade" />
+  <input type="text" [(ngModel)]="estudante.nota1" />
+  <input type="text" [(ngModel)]="estudante.nota2" />
+  <input type="text" [(ngModel)]="estudante.nota3" />
+  <p>{{ estudante | json }}</p>
+</section>
+
+
+<!--
+  Data binding: é a vinculação de dados entre o componente e o DOM do HTML.
+
+  Componentes: são os blocos que são montados na aplicação, a partir do app component (ex: tijolo), até ter toda a aplicação. Necessário: selector, templateUrl, styleUrls(styleUrls é não obrigatório).
+
+  Módulo: é uma forma de separar as funcionalidades no projeto. É um grupo de componentes, serviços, pipes e outros recursos que serão utilizados.
+-->
+

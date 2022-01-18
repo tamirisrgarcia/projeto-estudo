@@ -1,0 +1,40 @@
+<section>
+  <div>
+    <input type="text" name="nomeCompleto" [(ngModel)]="nomeCompleto" />
+  </div>
+  <div>
+    <input type="text" name="idade" [(ngModel)]="idade" />
+  </div>
+  <div>
+    <input type="text" name="sexo" [(ngModel)]="sexo" />
+  </div>
+  <div>
+    <input type="text" name="altura" [(ngModel)]="altura" />
+  </div>
+  <div>
+    <input type="text" name="peso" [(ngModel)]="peso" />
+  </div>
+  <!-- <button (click)="addPaciente()">Adicionar</button> -->
+  <form>
+    <table>
+      <thead>
+        <th></th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Sexo</th>
+        <th>Altura</th>
+        <th>Peso</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pac of paciente; let id = index">
+          <!-- <td> {{ paciente.nomeCompleto }}</td>
+          <td>{{ paciente.idade}}</td>
+          <td>{{ paciente.sexo }}</td>
+          <td>{{ paciente.altura }}</td>
+          <td>{{ paciente.peso }}</td> -->
+        </tr>
+        <button>Deletar</button>
+      </tbody>
+    </table>
+  </form>
+</section>
